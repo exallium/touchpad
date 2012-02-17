@@ -11,7 +11,6 @@ public class TouchpadView extends View {
 	private static int INVALID_POINTER_ID;
 	private int mActivePointerId = INVALID_POINTER_ID;
 	private int mMoves;
-	private int prev = 0;
 	private int count = 0;
 	private int max_down = 0;
 	
@@ -64,7 +63,6 @@ public class TouchpadView extends View {
 			break;
 		}
 
-		prev = action & MotionEvent.ACTION_MASK;
 		count = ev.getPointerCount();
 		max_down = ev.getPointerCount() > max_down ? ev.getPointerCount() : max_down;
 		return true;
