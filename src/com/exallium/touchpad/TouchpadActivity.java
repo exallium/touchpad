@@ -17,6 +17,5 @@ public class TouchpadActivity extends Activity {
         setContentView(R.layout.main);
         
         view = (TouchpadView) this.findViewById(R.id.touchpad);
-        
     }
 }
