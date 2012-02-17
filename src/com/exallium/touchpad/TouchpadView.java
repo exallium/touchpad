@@ -87,8 +87,14 @@ public class TouchpadView extends View {
 				}
 			}
 			
-			if(count == 2 && mMoves < 5) {
+			if(count == 2 && mMoves < 5 && max_down <= 3) {
 				Log.d(TAG, "GOT MULTI CLICK " + max_down);	
+				try {
+					out.writeBytes("click " + max_down);
+				} catch (IOException e) {
+					Toast.makeText(getContext(), "Cannot Send.  Please reconnect", Toast.LENGTH_LONG).show();
+					e.printStackTrace();
+				}
 			}
 			
 			prevx = -1;
