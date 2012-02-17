@@ -73,6 +73,7 @@ public class TouchpadView extends View {
 		case MotionEvent.ACTION_UP:
 			Log.d(TAG, "ACTION_UP " + count);
 			mActivePointerId = INVALID_POINTER_ID;
+			break;
 		case MotionEvent.ACTION_CANCEL:
 			Log.d(TAG, "ACTION_CANCEL" + count);
 			mActivePointerId = INVALID_POINTER_ID;
